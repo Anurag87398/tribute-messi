@@ -272,9 +272,6 @@ body{
 }
 
 
-.box1, .box2, .box3, .box4{
-    /* display: none; */
-}
 
 /* box5 */
 .box5{
@@ -368,26 +365,6 @@ body{
 }
 
 
-/* box6 */
-.box6{
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    border-top: 10px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* position: relative; */
-    /* isolation: isolate; */
-}
-
-
-
-.box1, .box2, .box3, .box4, .box5, .box6{
-    /* display: none; */
-}
-
-
 /* box7 */
 .box7{
     width: 100%;
@@ -473,6 +450,9 @@ body{
     /* width: 35%;  */
 }
 
+.box7-content .stats-container .teams:hover + .team-stats .fields{
+    color: #43A1D5;
+}
 
 
 .box7-content .stats-container .team-stats{
@@ -484,11 +464,12 @@ body{
     justify-content: center;
     align-items: center;
     border-left: solid 1px white;
+    
 }
 
 .box7-content .stats-container .team-stats .data{
     /* background-color: blue; */
-    width: 80%;
+    width: 30%;
     height: 50%;
     display: flex;
     flex-direction: column;
@@ -499,30 +480,43 @@ body{
     
 }
 
+.box7-content .stats-container .team-stats .data .stat{
+    display: flex;
+    align-items: center;
+    /* background-color: aqua; */
+    width: 100%;
+    transition: .2s ease-in-out;
+}
+
 .box7-content p{
     text-shadow: 1px 1px black;
     font-size: 1.7rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* display: inline-block; */
 }
 
-.box7-content img:hover p{
-    color: black;
+.box7-content .stats-container .team-stats .data .fields{
+    transition: .1s ease-in-out;
 }
 
 
 
-
-.test{
-    height: 100px;
-    width: 1000px;
-    background-color: black;
-    display: none;
+/* FOOTER */
+.foot{
+    width: 100%;
+    height: 10vh;
+    display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-top: 5px solid black;
+    color: rgb(200, 199, 199);
 }
 
-.test h1{
-    margin-bottom: 1%;
+.foot #heart{
+    color: red;
 }
 
 
@@ -538,10 +532,17 @@ body{
 
   /* Handle */
 ::-webkit-scrollbar-thumb {
-    background-color: black;
+    background-color: white;
     border-radius: 5px;
 }
 
+::-webkit-scrollbar-thumb:active{
+    background-color: #43A1D5;
+}
+
+
+
+/* MEDIA QUERIES */
 @media (max-width: 1000px) {
     .box1 #separator{
         width: 50vw;
